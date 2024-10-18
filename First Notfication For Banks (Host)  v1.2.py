@@ -9,7 +9,7 @@ def zero(x):
     else:
         return min
 
-xls = pd.ExcelFile(r"\\192.168.17.10\IT Service Desk\IT Service Desk - Documents\Updated Contact Sheet.xlsx")
+xls = pd.ExcelFile(r"\\Server_IP\IT Service Desk\IT Service Desk - Documents\Updated Contact Sheet.xlsx")
 df1 = pd.read_excel(xls, 'Banks')
 df2 = pd.read_excel(xls, 'Codes')  
 df3 = pd.read_excel(xls, 'Links')
@@ -92,7 +92,7 @@ outlook = client.Dispatch("Outlook.Application")
 message = outlook.CreateItem(0)
 message.Display()
 message.To = bank_email
-message.CC = "ITservicedesk.dl@network.global;cse.dl@network.global;rd.africa@emp-group.com;onlinesupport.Africa@network.global;Network.Africa@network.global;Mohamed.Hafez@network.global;possupport.Africa@network.global"
+message.CC = "ITservicedesk;cse;onlinesupport;Network;possupport"
 message.Subject = str(code_name)+ " " + "-" + " " + str(bank_name) + " " + "-" + " " + str(x) + " " + "Host Interface" + " " + str(y) + " " + str(jira)
 html_body= """<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="color:black;">Dear Valued Client,</span></p>
 <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="color:black;">&nbsp;</span></p>
