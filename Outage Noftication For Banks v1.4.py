@@ -22,12 +22,12 @@ def zero(x):
         return min
 
 
-xls = pd.ExcelFile(r"\\192.168.17.10\IT Service Desk\IT Service Desk - Documents\Updated Contact Sheet.xlsx")
+xls = pd.ExcelFile(r"\\Server_IP\IT Service Desk\IT Service Desk - Documents\Updated Contact Sheet.xlsx")
 df1 = pd.read_excel(xls, 'Banks')
 df2 = pd.read_excel(xls, 'Banks')
 df3 = pd.read_excel(xls, 'Banks')
-to = "itservicedesk.africa@network.global"
-cc =  "ITLT_Africa@network.global;onlinesupport.Africa@network.global;Network.Africa@network.global;serviceDelivery.Africa@network.global;RD.Africa@emp-group.com;QA_Team.Africa@network.global;cse.dl@network.global;ITservicedesk.dl@network.global;contactcenterafrica.dl@network.global"
+to = "itservicedesk"
+cc =  ""
 banks = int(input ("Enter spcifec banks: 1-TWO 2-FEP 3-All 4-3D Secure Banks 5-Specific Banks\n"))
 service = int(input ("Enter Service Name: 1-Transaction Authorization 2-Jira 3-Citrix 4-FTP 5-3D Secure 6-Add it manually\n"))
 impacted_service = service_name(service)
